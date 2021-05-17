@@ -56,6 +56,10 @@ public class GenerateHensonNavigatorTask extends DefaultTask {
   }
   @Input String hensonNavigatorPackageName;
 
+  public String getHensonNavigatorPackageName() {
+    return hensonNavigatorPackageName;
+  }
+
   File destinationFolder;
 
   @OutputFile

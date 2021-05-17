@@ -46,7 +46,7 @@ subprojects {
         google()
     }
 
-    apply plugin: "com.diffplug.gradle.spotless"
+//    apply plugin: "com.diffplug.gradle.spotless"
 
 //    def checkSubTask = project.tasks.findByName('check')
 //    if(checkSubTask) {
@@ -57,12 +57,12 @@ subprojects {
         tasks['install'].dependsOn installSubTask
     }
 
-    spotless {
-        java {
-            licenseHeaderFile rootProject.file('spotless.license.java.txt')
-            googleJavaFormat() // use a specific formatter for Java files
-        }
-    }
+//    spotless {
+//        java {
+//            licenseHeaderFile rootProject.file('spotless.license.java.txt')
+//            googleJavaFormat() // use a specific formatter for Java files
+//        }
+//    }
     tasks.withType(JavaCompile) { task ->
         task.options.compilerArgs << "-Xlint:deprecation"
     }
